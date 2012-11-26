@@ -1,6 +1,6 @@
-require 'mongo/rails/instrumentation'
+require 'moped/rails/instrumentation'
 
-module Mongo::Rails::Instrumentation
+module Moped::Rails::Instrumentation
   module ControllerRuntime
     extend ActiveSupport::Concern
 

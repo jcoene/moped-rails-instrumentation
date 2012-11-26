@@ -1,8 +1,8 @@
-require 'mongo/rails/instrumentation'
+require 'moped/rails/instrumentation'
 
-module Mongo::Rails::Instrumentation
+module Moped::Rails::Instrumentation
   class Railtie < Rails::Railtie
-    initializer "mongo.rails.instrumentation" do |app|
+    initializer "moped.rails.instrumentation" do |app|
       instrument Moped::Connection, [
         :read,
         :write
@@ -12,7 +12,7 @@ module Mongo::Rails::Instrumentation
         include ControllerRuntime
       end
 
-      LogSubscriber.attach_to :mongo
+      LogSubscriber.attach_to :moped
     end
 
     def instrument(clazz, methods)

@@ -1,7 +1,7 @@
-module Mongo
+module Moped
   module Rails
     module Instrumentation
-      VERSION = '0.2.4'
+      VERSION = '0.1'
     end
   end
 end

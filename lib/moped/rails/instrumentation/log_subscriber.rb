@@ -1,6 +1,6 @@
-require 'mongo/rails/instrumentation'
+require 'moped/rails/instrumentation'
 
-class Mongo::Rails::Instrumentation::LogSubscriber < ActiveSupport::LogSubscriber
+class Moped::Rails::Instrumentation::LogSubscriber < ActiveSupport::LogSubscriber
   RUNTIME_KEY = name + "#runtime"
   COUNT_KEY = name + "#count"
 
