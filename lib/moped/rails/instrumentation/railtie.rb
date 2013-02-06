@@ -20,7 +20,7 @@ module Moped::Rails::Instrumentation
         methods.each do |m|
           class_eval <<-CODE, __FILE__, __LINE__ + 1
             def #{m}_with_instrumentation(*args, &block)
-              ActiveSupport::Notifications.instrumenter.instrument "mongo.mongo", :name => "#{m}" do
+              ActiveSupport::Notifications.instrumenter.instrument "mongo.moped", :name => "#{m}" do
                 #{m}_without_instrumentation(*args, &block)
               end
             end
